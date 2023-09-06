@@ -1,2 +1,49 @@
-<p>create-schema works!</p>
-<button mat-raised-button>button</button>
+<h1>Create Schema</h1>
+
+<form [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Key</mat-label>
+        <input matInput formControlName="key" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Schema Type</mat-label>
+        <mat-select formControlName="type">
+            <mat-option *ngFor="let option of ['SINGLE', 'COLLECTION']" [value]="option">{{option}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div>Fields</div>
+    <ng-container formArrayName="fields">
+        <ng-container *ngFor="let fieldForm of fields.controls; let i=index;">
+            <div [formGroupName]="i" class="flex gap-2">
+                <mat-form-field appearance="fill">
+                    <mat-label>Key</mat-label>
+                    <input matInput formControlName="key" placeholder="Placeholder">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Label</mat-label>
+                    <input matInput formControlName="label" placeholder="Placeholder">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Field Type</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let option of fieldTypeOptions" [value]="option">{{option}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-icon-button (click)="addField()" color="primary" *ngIf="i == fields.controls.length-1">
+                    <mat-icon>add</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" (click)="deleteField(i)" *ngIf="i != fields.controls.length-1">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </ng-container>
+    </ng-container>
+
+
+    <button (click)="handleSave()">Create Schema</button>
+    
+</form>
