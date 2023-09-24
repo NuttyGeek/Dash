@@ -23,8 +23,12 @@ export interface Field {
     label: string;
     options?: FieldOption[];
     initialValue?: any;
+    props?: {
+        options?: { label: string, value: any }[];
+    }
+    required?: boolean;
 }
 
-export const getFieldTypeOptions = (): any[] => {
-    return Object.values(FieldType);
+export const getFieldTypeOptions = (): string[] => {
+    return Object.values(FieldType).map((v) => v+'');
 }

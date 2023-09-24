@@ -9,35 +9,27 @@ import { getFieldTypeOptions } from '../field';
 })
 export class CreateSchemaComponent {
 
-  form: FormGroup;
+  form: any = {
+    key: '',
+    name: '',
+    type: '',
+    fields: [{ key: '', type: '', label: '' }]
+  };
   fieldTypeOptions: any[] = getFieldTypeOptions();
 
   constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      key: [''],
-      name: [''],
-      type: [''],
-      fields: this.fb.array([{ key: '', type: '', label: '' }])
-    })
-  }
-
-  get fields() {
-    return this.form.controls['fields'] as FormArray;
   }
 
   addField() {
-    this.fields.push(this.fb.group({ key: '', type: '', label: '' }));
+    this.form.fields.push({ key: '', type: '', label: '' });
   }
 
   deleteField(i: number) {
-    this.fields.removeAt(i);
+    this.form.fields.splice(i, 1);
   }
 
   handleSave() {
-    console.log('save', this.form.value);
-    
+    console.log('save', this.form);
   }
-
-
-
+  
 }

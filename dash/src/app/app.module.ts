@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedCompModule } from 'projects/shared-comp/src/public-api';
 import { MatButtonModule } from '@angular/material/button';
+import { FormlyModule } from '@ngx-formly/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyMaterialModule } from '@ngx-formly/material';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    SharedCompModule
+    SharedCompModule,
+    FormlyModule.forRoot(),
+    ReactiveFormsModule,
+    FormlyMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

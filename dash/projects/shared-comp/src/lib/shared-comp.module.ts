@@ -4,13 +4,15 @@ import { CreateSchemaComponent } from './create-schema/create-schema.component';
 import { MaterialModule } from './material.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { FieldComponent } from './field/field.component';
 
-const COMPONENTS = [SharedCompComponent, CreateSchemaComponent];
+const COMPONENTS = [SharedCompComponent, CreateSchemaComponent, FormComponent, FieldComponent];
 
 @NgModule({
   declarations: [COMPONENTS],
-  imports: [CommonModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule],
+  imports: [CommonModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule, FormsModule],
   exports: [COMPONENTS],
 })
 export class SharedCompModule {}
