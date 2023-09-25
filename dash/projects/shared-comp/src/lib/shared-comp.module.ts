@@ -13,6 +13,6 @@ const COMPONENTS = [SharedCompComponent, CreateSchemaComponent, FormComponent, F
 @NgModule({
   declarations: [COMPONENTS],
   imports: [CommonModule, BrowserAnimationsModule, MaterialModule, ReactiveFormsModule, FormsModule],
-  exports: [COMPONENTS],
+  exports: [COMPONENTS, MaterialModule],
 })
 export class SharedCompModule {}

@@ -3,3 +3,7 @@
     max-width: 300px;
     margin: 0 auto;
 }
+
+.page-container {
+    height: calc(100vh - 64px);
+}

@@ -9,6 +9,7 @@ import { FormlyFieldConfig } from '@ngx-formly/core';
 })
 export class AppComponent {
   title = 'dash';
+  opened = true;
 
   form = new FormGroup({});
   model = {};
@@ -74,5 +75,10 @@ export class AppComponent {
 
   onSubmit() {
     console.log(':: form', this.model);
+  }
+
+  handleToggle() {
+    console.log(':: toggle');
+    this.opened = !this.opened;
   }
 }

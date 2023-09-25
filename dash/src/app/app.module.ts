@@ -9,10 +9,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyMaterialModule } from '@ngx-formly/material';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    SidebarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,7 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
     SharedCompModule,
     FormlyModule.forRoot(),
     ReactiveFormsModule,
-    FormlyMaterialModule
+    FormlyMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

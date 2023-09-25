@@ -1,24 +1,10 @@
-<h1>Main App</h1>
-<!-- <lib-create-schema></lib-create-schema> -->
-<lib-form></lib-form>
-<!-- <button mat-raised-button color="primary">Check</button> -->
-
-<!-- <h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1> -->
-<!-- <form [formGroup]="form" (ngSubmit)="onSubmit()" class="field">
-  <formly-form
-    [form]="form"
-    [model]="model"
-    [fields]="fields">
-  </formly-form>
-
-  <button type="submit" color="primary" mat-raised-button>
-    Submit
-  </button>
-
-  <button type="reset" color="warn" mat-raised-button>
-    Reset
-  </button>
-</form> -->
+<app-navbar (toggle)="handleToggle()"></app-navbar>
+<mat-drawer-container class="page-container" autosize>
+  <mat-drawer mode="side" [opened]="opened">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content class="p-2">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
 

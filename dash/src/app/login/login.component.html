@@ -1,0 +1,14 @@
+<div class="text-xl font-semibold text-center m-3">Login</div>
+<form [formGroup]="loginForm">
+    <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input type="text" matInput />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" formControlName="password" matInput />
+    </mat-form-field>
+    <button color="primary" mat-raised-button>
+        Login
+    </button>
+</form>

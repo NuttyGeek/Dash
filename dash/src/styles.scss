@@ -42,3 +42,27 @@ body { margin: 0; font-family: 'Manrope', Roboto, "Helvetica Neue", sans-serif; 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mat-icon {
+  height: 26px !important;
+}
+
+.mat-drawer-content {
+  background: #fafafa;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.mat-drawer-container {
+  background: rgba(255, 255, 255, 0.5);
+}
+mat-drawer.mat-drawer-side {
+  border-right: 0px;
+  min-width: 10rem;
+  background:  transparent
+}
+
+
+body {
+  background: url('assets/prism.svg');
+}
