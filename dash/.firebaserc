@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "dash-procloudware"
+  },
+  "targets": {
+    "dash-procloudware": {
+      "hosting": {
+        "dash": [
+          "dash-procloudware"
+        ]
+      }
+    }
   }
 }

@@ -2,13 +2,13 @@
 <form [formGroup]="loginForm">
     <mat-form-field>
         <mat-label>Username</mat-label>
-        <input type="text" matInput />
+        <input formControlName="username" type="text" matInput />
     </mat-form-field>
     <mat-form-field>
         <mat-label>Password</mat-label>
         <input type="password" formControlName="password" matInput />
     </mat-form-field>
-    <button color="primary" mat-raised-button>
+    <button color="primary" (click)="login()" mat-raised-button>
         Login
     </button>
 </form>
