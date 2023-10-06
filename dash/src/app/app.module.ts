@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedCompModule } from 'projects/shared-comp/src/public-api';
 import { MatButtonModule } from '@angular/material/button';
-import { FormlyModule } from '@ngx-formly/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormlyMaterialModule } from '@ngx-formly/material';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
@@ -26,9 +24,7 @@ import { LoginComponent } from './login/login.component';
     MatButtonModule,
     BrowserAnimationsModule,
     SharedCompModule,
-    FormlyModule.forRoot(),
-    ReactiveFormsModule,
-    FormlyMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

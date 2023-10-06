@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormlyFieldConfig } from '@ngx-formly/core';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,7 @@ export class AppComponent {
 
   form = new FormGroup({});
   model = {};
-  fields: FormlyFieldConfig[] = [
+  fields = [
     {
       key: 'input',
       type: 'input',
@@ -71,7 +70,7 @@ export class AppComponent {
       },
       className: 'field'
     },
-  ];
+  ]
 
   onSubmit() {
     console.log(':: form', this.model);
