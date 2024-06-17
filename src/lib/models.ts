@@ -1,0 +1,10 @@
+export enum FieldOptions {
+    TEXT_SHORT = 'TEXT_SHORT',
+    TEXT_LARGE = 'TEXT_LARGE',
+    SELECT_SINGLE = 'SELECT_SINGLE',
+    SELECT_MULTI = 'SELECT_MULTI',
+    NUMBER = 'NUMBER',
+    DATE = 'DATE',
+    BOOLEAN = 'BOOLEAN',
+    EMAIL = 'EMAIL',
+}
